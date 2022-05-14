@@ -14,10 +14,10 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-  &-item:not(:last-child) {
+  &__item:not(:last-child) {
     margin-right: 30px;
   }
-  &-item::before {
+  &__item::before {
     width: 270px;
     height: 120px;
     background-color: var(--description-color);
@@ -26,7 +26,7 @@
     background-position: center;
     background-repeat: no-repeat;
   }
-  &-icon {
+  &__icon {
     height: 120px;
     margin-bottom: 30px;
     display: flex;
@@ -35,7 +35,22 @@
     background-color: var(--description-color);
     border-radius: 4px;
   }
-  &-icon-svg {
+  &__svg {
     color: var(--client-command-color);
   }
+}
+.text {
+  font-family: $font-family-2nd;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}
+.title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }

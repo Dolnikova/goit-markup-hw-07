@@ -1,10 +1,16 @@
 @import "./utils/variables";
+@import "./utils/font";
 @import "./components/container";
 @import "./base/other";
 @import "./base/zeroing";
 @import "./layout/header";
 
 @import "./layout/hero";
+@import "./layout/modal";
 @import "./components/description";
+@import "./layout/work";
 @import "./layout/command";
+@import "./layout/social_links";
+@import "./layout/clients";
 @import "./layout/footer";
+@import "./layout/portfolio";

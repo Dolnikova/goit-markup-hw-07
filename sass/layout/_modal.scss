@@ -1,0 +1,205 @@
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms, visibility 250ms;
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+.modal {
+  max-width: 528px;
+  min-height: 581px;
+  background-color: var(--logo-footer-adress-hero);
+  border: none;
+  position: absolute;
+  display: contents;
+  left: 100%;
+  transform: translate(-100%, -50%);
+  transition: transform 250ms;
+  &__button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+      fill: var(--second-color);
+    }
+  }
+  &-icon {
+    position: relative;
+    &__svg {
+      position: absolute;
+      top: 11px;
+      left: 12px;
+      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+  &-field {
+    margin-bottom: 10px;
+    &-check {
+      margin-bottom: 30px;
+    }
+  }
+  &-comment {
+    margin-bottom: 20px;
+  }
+  &-label {
+    display: block;
+    font-family: $font-family-2nd;
+    font-size: 12px;
+    line-height: 1.67;
+    letter-spacing: 0.01em;
+    color: var(--text-color);
+    margin-bottom: 4px;
+  }
+  &-text {
+    display: block;
+    width: 448px;
+    height: 120px;
+    font-family: $font-family-2nd;
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: 0.01em;
+    width: 448px;
+    height: 120px;
+    color: rgba(117, 117, 117, 0.5);
+    border-color: rgba(33, 33, 33, 0.2);
+    padding: 12px 16px;
+    outline: none;
+    resize: none;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus {
+      border-radius: 4px;
+      border: 1px solid var(--second-color);
+    }
+  }
+}
+.block-modal {
+  background-color: var(--logo-footer-adress-hero);
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 250ms;
+  &__title {
+    font-family: $font-family-2nd;
+    font-size: 20px;
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--brand-color);
+    text-align: center;
+    margin-bottom: 12px;
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal-label:focus-within > .icon {
+  background-color: var(--second-color);
+}
+
+.modal-form-block:focus-visible {
+  border-color: var(--second-color);
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  padding-left: 42px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    border-radius: 4px;
+    border: 1px solid var(--second-color);
+  }
+  &:focus + .modal-icon__svg {
+    fill: var(--second-color);
+  }
+  &::placeholder {
+    font-family: $font-family-1st;
+    font-size: 12px;
+    line-height: 1.67;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+  &:focus:placeholder-shown {
+    border: 1px solid var(--second-color);
+  }
+}
+
+.check-text {
+  font-family: $font-family-1st;
+  font-size: 14px;
+  line-height: 1.72;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.modal-icon-span {
+  margin-right: 9px;
+  &__check {
+    fill: transparent;
+  }
+}
+.check-text span .modal-icon-span__check {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--brand-color);
+  border-radius: 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-check:checked + .check-text span .modal-icon-span__check {
+  background-color: var(--second-color);
+  border: none;
+}
+.modal-check:checked + .check-text .modal-icon-span__check {
+  fill: var(--logo-footer-adress-hero);
+}
+.agreement-text {
+  color: var(--second-color);
+  text-decoration: underline;
+  padding-left: 1px;
+}
+
+.send {
+  display: block;
+  font-family: $font-family-2nd;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  background-color: var(--second-color);
+  color: var(--logo-footer-adress-hero);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 50px;
+  border: transparent;
+}
