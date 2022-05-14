@@ -12,33 +12,34 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.css"/>
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <nav class="nav-menu">
+        <nav class="nav">
           <a class="logo" href="" lang="en"
-            ><span class="logo-part">Web</span>Studio</a
+            ><span class="logo__part">Web</span>Studio</a
           >
-          <ul class="menu-header">
-            <li class="menu-list">
+          <ul class="header__menu">
+            <li class="header__list">
               <a class="menu" href="./index.html">Студия</a>
             </li>
-            <li class="menu-list">
+            <li class="header__list">
               <a class="menu current" href="./portfolio.html">Портфолио</a>
             </li>
-            <li class="menu-list"><a class="menu" href="">Контакты</a></li>
+            <li class="header__list"><a class="menu" href="">Контакты</a></li>
           </ul>
         </nav>
-        <ul class="contacts-header">
-          <li class="menu-list">
+        <ul class="header__contacts">
+          <li class="header__list">
             <a class="contacts mail" href="mailto:info@devstudio.com">
-              <svg class="contacts-header-icon envelope">
+              <svg class="contacts__icon envelope">
                 <use href="./images/symbol-defs1.svg#envelope"></use></svg>info@devstudio.com</a>
           </li>
-          <li class="menu-list">
+          <li class="header__list">
             <a class="contacts telefon" href="tel:+380961111111">
-              <svg class="contacts-header-icon smartphone">
+              <svg class="contacts__icon smartphone">
                 <use href="./images/symbol-defs1.svg#smartphone"></use>
               </svg>
               +38 096 111 11 11
@@ -268,7 +269,8 @@
       <div class="container">
         <div class="logo-footer-bloc">
           <a class="logo-footer" href="./index.html" lang="en"
-            ><span class="logo-part">Web</span>Studio</a>
+            ><span class="logo__part">Web</span>Studio</a
+          >
           <address class="footer-list">
             <ul>
               <li class="list-adress">
@@ -277,18 +279,21 @@
                   href="https://goo.gl/maps/v7KqHqCivUXDigUB9"
                   target="_blank"
                   rel="noopener, noindex, nofollow"
-                  >г. Киев, б-р Леси Украинки, 26</a>
+                  >г. Киев, б-р Леси Украинки, 26</a
+                >
               </li>
               <li class="list-contacts">
                 <a
                   class="footer-list-contacts"
                   href="mailto:info@example.com"
                   lang="en"
-                  >info@example.com</a>
+                  >info@example.com</a
+                >
               </li>
               <li class="list-contacts">
                 <a class="footer-list-contacts" href="tel:+380991111111"
-                  >+38 099 111 11 11</a>
+                  >+38 099 111 11 11</a
+                >
               </li>
             </ul>
           </address>
@@ -336,13 +341,13 @@
                 class="footer-modal-input"
                 placeholder="E-mail"
               />
+              <button class="subscribe-button subscribe-class">
+                Подписаться
+                <svg class="subscribe-icon" width="24" height="24">
+                  <use href="./images/symbol-defs1.svg#iconsend"></use>
+                </svg>
+              </button>
             </form>
-            <button class="subscribe-button subscribe-class">
-              Подписаться
-              <svg class="subscribe-icon" width="24" height="24">
-                <use href="./images/symbol-defs1.svg#iconsend"></use>
-              </svg>
-            </button>
           </div>
         </div>
       </div>
