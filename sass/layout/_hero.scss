@@ -1,4 +1,3 @@
-
 .hero {
   background-color: var(--background-color);
   color: var(--logo-footer-adress-hero);
@@ -15,7 +14,8 @@
   background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
-  &__name {
+
+  &__title {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;

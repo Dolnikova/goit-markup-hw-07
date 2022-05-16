@@ -1,4 +1,4 @@
-.desktop {
+.works__text {
   font-family: $font-family-2nd;
   font-weight: 700;
   position: absolute;
@@ -13,12 +13,13 @@
   align-items: Center;
   justify-content: center;
   letter-spacing: 0.03em;
-  &-fone {
-    position: relative;
-    overflow: hidden;
-  }
 }
-.section__item {
+.works__box {
+  position: relative;
+  overflow: hidden;
+}
+.works__item,
+.command__item{
   background-color: var(--logo-footer-adress-hero);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);

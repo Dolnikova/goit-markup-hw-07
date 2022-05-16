@@ -61,13 +61,16 @@ li {
   list-style-type: none;
 }
 
-.pnon {
+.section--nowpadding {
   padding-top: 0;
 }
 
 .header {
-  display: block;
   margin: 0;
+}
+
+.header__container {
+  display: block;
 }
 
 .logo {
@@ -78,13 +81,15 @@ li {
   padding-bottom: 24px;
 }
 
-.logo__part {
+.logo__part,
+.logo-footer__part {
   color: var(--second-color);
 }
 
 .logo,
 .logo__part,
-.logo-footer__item {
+.logo-footer,
+.footer__box {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.192;
@@ -93,19 +98,19 @@ li {
   text-decoration: none;
 }
 
-.logo-footer__item {
+.logo-footer {
   margin-bottom: 20px;
 }
 
-.menu {
+.site-nav__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.menu.current {
+.site-nav__link.site-nav__link--current {
   color: var(--second-color);
 }
-.menu.current::after {
+.site-nav__link.site-nav__link--current::after {
   display: inline-block;
   content: "";
   position: absolute;
@@ -117,12 +122,17 @@ li {
   background-color: var(--second-color);
 }
 
-.contacts {
+.contacts__link {
   color: var(--text-color);
   display: inline-flex;
   align-items: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.contacts__link:hover, .contacts__link:focus {
+  color: var(--second-color);
+  --text-color: var(--second-color);
+}
+
 .contacts__icon {
   display: inline-flex;
   margin-right: 10px;
@@ -131,13 +141,9 @@ li {
   align-items: center;
   color: currentColor;
 }
-.contacts:hover, .contacts:focus {
-  color: var(--second-color);
-  --text-color: var(--second-color);
-}
 
-.menu,
-.contacts {
+.site-nav__link,
+.contacts__link {
   display: flex;
   align-items: center;
   font-weight: 500;
@@ -154,19 +160,21 @@ li {
   display: flex;
   align-items: center;
 }
-.header__list {
-  position: relative;
-}
-.header__list:not(:last-child) {
-  margin-right: 50px;
-}
-.header__menu {
-  display: flex;
-}
-.header__contacts {
+
+.contacts {
   align-items: center;
   display: flex;
   margin-left: auto;
+}
+
+.site-nav {
+  display: flex;
+}
+.site-nav__item {
+  position: relative;
+}
+.site-nav__item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .nav {
@@ -184,13 +192,13 @@ li {
   height: 12px;
 }
 
-.menu {
+.site-nav__link {
   color: var(--brand-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.menu:hover, .menu:focus,
-.menu .contacts:hover,
-.menu .contacts:focus {
+.site-nav__link:hover, .site-nav__link:focus,
+.site-nav__link .contacts__link:hover,
+.site-nav__link .contacts__link:focus {
   color: var(--second-color);
 }
 
@@ -207,7 +215,7 @@ li {
   background-position: center;
   background-repeat: no-repeat;
 }
-.hero__name {
+.hero__title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -449,7 +457,8 @@ li {
   padding-bottom: 94px;
 }
 
-.description {
+.section__title,
+.description-modal {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -461,9 +470,11 @@ li {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 .description__item:not(:last-child) {
   margin-right: 30px;
 }
+
 .description__item::before {
   width: 270px;
   height: 120px;
@@ -473,7 +484,8 @@ li {
   background-position: center;
   background-repeat: no-repeat;
 }
-.description__icon {
+
+.description__box {
   height: 120px;
   margin-bottom: 30px;
   display: flex;
@@ -482,6 +494,7 @@ li {
   background-color: var(--description-color);
   border-radius: 4px;
 }
+
 .description__svg {
   color: var(--client-command-color);
 }
@@ -503,7 +516,7 @@ li {
   margin-bottom: 10px;
 }
 
-.desktop {
+.works__text {
   font-family: "Roboto", Tahoma, sans-serif;
   font-weight: 700;
   position: absolute;
@@ -519,21 +532,24 @@ li {
   justify-content: center;
   letter-spacing: 0.03em;
 }
-.desktop-fone {
+
+.works__box {
   position: relative;
   overflow: hidden;
 }
 
-.section__item {
+.works__item,
+.command__item {
   background-color: var(--logo-footer-adress-hero);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.section__item:not(:last-child) {
+.works__item:not(:last-child),
+.command__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.command {
+.section__command {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.172;
@@ -543,28 +559,29 @@ li {
   padding-top: 0;
 }
 
-.our-command-section {
+.section--otherbackgraund {
   background-color: var(--description-color);
   text-align: center;
   max-width: 1600px;
   margin: 0 auto;
 }
 
-.section__list,
-.our-command-list,
+.works,
+.command,
 .command-work,
-.description__list {
+.description {
   display: flex;
 }
 
-.command-block {
+.command__box {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-.command-block:not(:last-child) {
+.command__box:not(:last-child) {
   padding-left: 30px;
 }
-.command-block__title {
+
+.command__title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.187;
@@ -573,7 +590,7 @@ li {
   margin-bottom: 10px;
 }
 
-.position-text {
+.command__text {
   font-size: 16px;
   line-height: 1.187;
   text-align: center;
@@ -586,6 +603,7 @@ li {
   display: flex;
   justify-content: center;
 }
+
 .soc-list__link {
   width: 44px;
   height: 44px;
@@ -601,9 +619,11 @@ li {
   background-color: var(--second-color);
   fill: var(--logo-footer-adress-hero);
 }
+
 .soc-list__item + .soc-list__item {
   margin-left: 10px;
 }
+
 .soc-list__icon {
   color: var(--client-command-color);
 }
@@ -611,6 +631,7 @@ li {
 .client-list {
   display: flex;
 }
+
 .client-list__link {
   width: 44px;
   height: 44px;
@@ -622,16 +643,15 @@ li {
   fill: var(--client-command-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.client-list__item + .client-list__item {
-  margin-left: 30px;
-}
-.client-list__icon {
-  color: var(--client-command-color);
-}
 .client-list__link:hover, .client-list__link:focus {
   border: 1px solid var(--second-color);
   fill: var(--second-color);
 }
+
+.client-list__item + .client-list__item {
+  margin-left: 30px;
+}
+
 .client-list__link {
   display: flex;
   border: 1px solid var(--client-command-color);
@@ -642,13 +662,15 @@ li {
   box-sizing: border-box;
   border-radius: 4px;
 }
+
 .client-list__icon {
   width: 106px;
   height: 60px;
   display: inline-block;
+  color: var(--client-command-color);
 }
 
-.client-title {
+.section__title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.166;
@@ -668,29 +690,35 @@ li {
   display: flex;
 }
 
-.footer-list {
+.address {
+  font-family: "Roboto", Tahoma, sans-serif;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   font-style: normal;
 }
-.footer-list__adress {
+
+.footer-address__link {
   color: var(--logo-footer-adress-hero);
   text-decoration: none;
 }
-.footer-list__list, .footer-list__contacts {
+
+.footer-address__link,
+.footer-contacts {
   display: flex;
   margin-bottom: 9px;
 }
-.footer-list .footer-list__contact {
+
+.address .footer-contacts__link {
   color: var(--footer-list-contacts-color);
   text-decoration: none;
 }
 
-.logo-footer {
+.footer__box {
   flex-grow: 1;
 }
-.logo-footer__item {
+
+.logo-footer {
   color: var(--logo-footer-adress-hero);
   display: block;
 }
@@ -713,9 +741,11 @@ li {
   margin-bottom: 20px;
   color: var(--logo-footer-adress-hero);
 }
+
 .join__list {
   display: inline-flex;
 }
+
 .join__link {
   width: 44px;
   height: 44px;
@@ -727,14 +757,16 @@ li {
   fill: var(--logo-footer-adress-hero);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.join__link:hover, .join__link:focus {
+  background-color: var(--second-color);
+}
+
 .join__item + .join__item {
   margin-left: 10px;
 }
+
 .join__icon {
   fill: var(--logo-footer-adress-hero);
-}
-.join__link:hover, .join__link:focus {
-  background-color: var(--second-color);
 }
 
 .subscribe {
@@ -809,12 +841,14 @@ input.footer-modal-input {
 .filter-list:first-child {
   padding-right: 495px;
 }
+
 .filter-list__menu {
   position: relative;
 }
 .filter-list__menu:not(:last-child) {
   margin-right: 8px;
 }
+
 .filter-list__button {
   font-family: "Roboto", Tahoma, sans-serif;
   font-weight: 500;

@@ -15,36 +15,42 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/main.min.css"/>
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
-      <div class="container">
+      <div class="container header__container">
         <nav class="nav">
           <a class="logo" href="" lang="en"
             ><span class="logo__part">Web</span>Studio</a
           >
-          <ul class="header__menu">
-            <li class="header__list">
-              <a class="menu current" href="./index.html">Студия</a>
+          <ul class="site-nav">
+            <li class="site-nav__item">
+              <a
+                class="site-nav__link site-nav__link--current"
+                href="./index.html"
+                >Студия</a
+              >
             </li>
-            <li class="header__list">
-              <a class="menu" href="./portfolio.html">Портфолио</a>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="./portfolio.html">Портфолио</a>
             </li>
-            <li class="header__list"><a class="menu" href="">Контакты</a></li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="">Контакты</a>
+            </li>
           </ul>
         </nav>
-        <ul class="header__contacts">
-          <li class="header__list">
-            <a class="contacts mail" href="mailto:info@devstudio.com">
+        <ul class="contacts">
+          <li class="site-nav__item">
+            <a class="contacts__link mail" href="mailto:info@devstudio.com">
               <svg class="contacts__icon envelope">
                 <use href="./images/symbol-defs1.svg#envelope"></use>
               </svg>
               info@devstudio.com
             </a>
           </li>
-          <li class="header__list">
-            <a class="contacts telefon" href="tel:+380961111111">
+          <li class="site-nav__item">
+            <a class="contacts__link telefon" href="tel:+380961111111">
               <svg class="contacts__icon smartphone">
                 <use href="./images/symbol-defs1.svg#smartphone"></use>
               </svg>
@@ -57,7 +63,7 @@
     <main>
       <section class="hero">
         <div class="container">
-          <h1 class="hero__name">Эффективные решения для вашего бизнеса</h1>
+          <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
           <button class="hero__button" type="button" data-modal-open>
             Заказать услугу
           </button>
@@ -65,11 +71,11 @@
       </section>
       <section class="section">
         <div class="container">
-          <h2 class="description">преимущесто</h2>
+          <h2 class="section__title">преимущесто</h2>
           <!-- <div class="description-box"></div> -->
-          <ul class="description__list">
-            <li class="description__item icon-antenna">
-              <div class="description__icon">
+          <ul class="description">
+            <li class="description__item">
+              <div class="description__box">
                 <svg class="description__svg" width="70" height="70">
                   <use href="./images/symbol-defs1.svg#antenna"></use>
                 </svg>
@@ -80,8 +86,8 @@
                 формированию позиции.
               </p>
             </li>
-            <li class="description__item icon-time">
-              <div class="description__icon">
+            <li class="description__item">
+              <div class="description__box">
                 <svg class="description__svg" width="70" height="70">
                   <use href="./images/symbol-defs1.svg#clock"></use>
                 </svg>
@@ -92,8 +98,8 @@
                 кадров влечет за собой.
               </p>
             </li>
-            <li class="description__item icon-diagram">
-              <div class="description__icon">
+            <li class="description__item">
+              <div class="description__box">
                 <svg class="descirption__svg" width="70" height="70">
                   <use href="./images/symbol-defs1.svg#diagram"></use>
                 </svg>
@@ -104,8 +110,8 @@
                 степени обуславливает.
               </p>
             </li>
-            <li class="description__item icon-astronaut">
-              <div class="description__icon">
+            <li class="description__item">
+              <div class="description__box">
                 <svg class="description__svg" width="70" height="70">
                   <use href="./images/symbol-defs1.svg#astronaut"></use>
                 </svg>
@@ -119,55 +125,59 @@
           </ul>
         </div>
       </section>
-      <section class="section pnon">
+      <section class="section section--nowpadding">
         <div class="container">
-          <h2 class="command">Чем мы занимаемся</h2>
-          <ul class="section__list">
-            <li class="section__item">
-              <div class="desktop-fone">
+          <h2 class="section__command">Чем мы занимаемся</h2>
+          <ul class="works">
+            <li class="works__item">
+              <div class="works__box">
                 <img
                   class="img-work"
                   src="./images/картинка1.jpg"
                   alt="работаем с компьютером"
                   width="370"
                 />
-                <p class="desktop">ДЕКСТОПНЫЕ ПРИЛОЖЕНИЯ</p>
+                <p class="works__text">ДЕКСТОПНЫЕ ПРИЛОЖЕНИЯ</p>
               </div>
             </li>
-            <li class="section__item">
-              <div class="desktop-fone">
+            <li class="works__item">
+              <div class="works__box">
                 <img
                   class="img-work"
                   src="./images/картинка2.jpg"
                   alt="работаем с ноутбуком"
                   width="370"
                 />
-                <p class="desktop">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
+                <p class="works__text">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
               </div>
             </li>
-            <li class="section__item">
-              <div class="desktop-fone">
+            <li class="works__item">
+              <div class="works__box">
                 <img
                   class="img-work"
                   src="./images/картинка3.jpg"
                   alt="работаем с планшетом"
                   width="370"
                 />
-                <p class="desktop">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</p>
+                <p class="works__text">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</p>
               </div>
             </li>
           </ul>
         </div>
       </section>
-      <section class="section our-command-section">
+      <section class="section section--otherbackgraund">
         <div class="container">
-          <h2 class="command">Наша команда</h2>
-          <ul class="our-command-list">
-            <li class="section__item">
-              <img src="./images/сотрудники/сотрудник1.jpg" alt="сотрудник1" width="270" />
-              <div class="command-block">
-                <h3 class="command-block__title">Игорь Демьяненко</h3>
-                <p class="position-text" lang="en">Product Designer</p>
+          <h2 class="section__command">Наша команда</h2>
+          <ul class="command">
+            <li class="command__item">
+              <img
+                src="./images/сотрудники/сотрудник1.jpg"
+                alt="сотрудник1"
+                width="270"
+              />
+              <div class="command__box">
+                <h3 class="command__title">Игорь Демьяненко</h3>
+                <p class="command__text" lang="en">Product Designer</p>
                 <ul class="soc-list list">
                   <li class="soc-list__item">
                     <a href="" class="soc-list__link">
@@ -200,11 +210,15 @@
                 </ul>
               </div>
             </li>
-            <li class="section__item">
-              <img src="./images/сотрудники/сотрудник2.jpg" alt="сотрудник2" width="270" />
-              <div class="command-block">
-                <h3 class="command-block__title">Ольга Репина</h3>
-                <p class="position-text" lang="en">Frontend Developer</p>
+            <li class="command__item">
+              <img
+                src="./images/сотрудники/сотрудник2.jpg"
+                alt="сотрудник2"
+                width="270"
+              />
+              <div class="command__box">
+                <h3 class="command__title">Ольга Репина</h3>
+                <p class="command__text" lang="en">Frontend Developer</p>
                 <ul class="soc-list list">
                   <li class="soc-list__item">
                     <a href="" class="soc-list__link">
@@ -237,11 +251,15 @@
                 </ul>
               </div>
             </li>
-            <li class="section__item">
-              <img src="./images/сотрудники/сотрудник3.jpg" alt="сотрудник3" width="270" />
-              <div class="command-block">
-                <h3 class="command-block__title">Николай Тарасов</h3>
-                <p class="position-text" lang="en">Marketing</p>
+            <li class="command__item">
+              <img
+                src="./images/сотрудники/сотрудник3.jpg"
+                alt="сотрудник3"
+                width="270"
+              />
+              <div class="command__box">
+                <h3 class="command__title">Николай Тарасов</h3>
+                <p class="command__text" lang="en">Marketing</p>
                 <ul class="soc-list list">
                   <li class="soc-list__item">
                     <a href="" class="soc-list__link">
@@ -274,11 +292,15 @@
                 </ul>
               </div>
             </li>
-            <li class="section__item">
-              <img src="./images/сотрудники/сотрудник4.jpg" alt="сотрудник4" width="270" />
-              <div class="command-block">
-                <h3 class="command-block__title">Михаил Ермаков</h3>
-                <p class="position-text" lang="en">UI Designer</p>
+            <li class="command__item">
+              <img
+                src="./images/сотрудники/сотрудник4.jpg"
+                alt="сотрудник4"
+                width="270"
+              />
+              <div class="command__box">
+                <h3 class="command__title">Михаил Ермаков</h3>
+                <p class="command__text" lang="en">UI Designer</p>
                 <ul class="soc-list list">
                   <li class="soc-list__item">
                     <a href="" class="soc-list__link">
@@ -316,7 +338,7 @@
       </section>
       <section class="section">
         <div class="container">
-          <h2 class="client-title">Постоянные клиенты</h2>
+          <h2 class="section__title">Постоянные клиенты</h2>
           <ul class="client-list">
             <li class="client-list__item">
               <a href="" class="client-list__link">
@@ -367,31 +389,31 @@
 
     <footer class="footer">
       <div class="container">
-        <div class="logo-footer">
-          <a class="logo-footer__item" href="./index.html" lang="en"
-            ><span class="logo__part">Web</span>Studio</a
+        <div class="footer__box">
+          <a class="logo-footer" href="./index.html" lang="en"
+            ><span class="logo-footer__part">Web</span>Studio</a
           >
-          <address class="footer-list">
+          <address class="address">
             <ul>
-              <li class="footer-list__list">
+              <li class="footer-address">
                 <a
-                  class="footer-list__adress"
+                  class="footer-address__link"
                   href="https://goo.gl/maps/v7KqHqCivUXDigUB9"
                   target="_blank"
                   rel="noopener, noindex, nofollow"
                   >г. Киев, б-р Леси Украинки, 26</a
                 >
               </li>
-              <li class="footer-list__contacts">
+              <li class="footer-contacts">
                 <a
-                  class="footer-list__contact"
+                  class="footer-contacts__link"
                   href="mailto:info@example.com"
                   lang="en"
                   >info@example.com</a
                 >
               </li>
-              <li class="footer-list__contacts">
-                <a class="footer-list__contact" href="tel:+380991111111"
+              <li class="footer-contacts">
+                <a class="footer-contacts__link" href="tel:+380991111111"
                   >+38 099 111 11 11</a
                 >
               </li>
@@ -459,7 +481,9 @@
             <use href="./images/symbol-defs1.svg#close"></use>
           </svg>
         </button>
-        <p class="block-modal__title">Оставьте свои данные, мы вам перезвоним</p>
+        <p class="block-modal__title">
+          Оставьте свои данные, мы вам перезвоним
+        </p>
         <form class="modal-form">
           <div class="modal-field">
             <label class="modal-label" for="user-name">
@@ -522,7 +546,7 @@
           <div class="modal-field-check">
             <input
               type="checkbox"
-              class="modal-check description"
+              class="modal-check description-modal"
               id="modal-check"
               name="policy"
               value="policy"

@@ -8,31 +8,32 @@
     display: flex;
   }
 }
-.footer-list {
+.address {
+  font-family: "Roboto", Tahoma, sans-serif;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   font-style: normal;
-  &__adress {
-    color: var(--logo-footer-adress-hero);
-    text-decoration: none;
-  }
-  &__list,
-  &__contacts {
-    display: flex;
-    margin-bottom: 9px;
-  }
-  & &__contact {
-    color: var(--footer-list-contacts-color);
-    text-decoration: none;
-  }
+}
+.footer-address__link {
+  color: var(--logo-footer-adress-hero);
+  text-decoration: none;
+}
+.footer-address__link,
+.footer-contacts {
+  display: flex;
+  margin-bottom: 9px;
+}
+.address .footer-contacts__link {
+  color: var(--footer-list-contacts-color);
+  text-decoration: none;
+}
+.footer__box {
+  flex-grow: 1;
 }
 .logo-footer {
-  flex-grow: 1;
-  &__item {
-    color: var(--logo-footer-adress-hero);
-    display: block;
-  }
+  color: var(--logo-footer-adress-hero);
+  display: block;
 }
 .footer-item:not(:last-child) {
   margin-right: 9px;
@@ -52,32 +53,34 @@
     margin-bottom: 20px;
     color: var(--logo-footer-adress-hero);
   }
-  &__list {
-    display: inline-flex;
-  }
-  &__link {
-    width: 44px;
-    height: 44px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    fill: var(--logo-footer-adress-hero);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  &__item + &__item {
-    margin-left: 10px;
-  }
-  &__icon {
-    fill: var(--logo-footer-adress-hero);
-  }
-  &__link:hover,
-  &__link:focus {
+}
+.join__list {
+  display: inline-flex;
+}
+.join__link {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--logo-footer-adress-hero);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
     background-color: var(--second-color);
   }
 }
+.join__item + .join__item {
+  margin-left: 10px;
+}
+.join__icon {
+  fill: var(--logo-footer-adress-hero);
+}
+
 .subscribe {
   margin-left: 93px;
   color: var(--logo-footer-adress-hero);

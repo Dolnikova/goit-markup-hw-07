@@ -1,8 +1,9 @@
 .header {
-  display: block;
   margin: 0;
 }
-
+.header__container {
+  display: block;
+}
 .logo {
   color: var(--logo-color);
   margin-right: 93px;
@@ -10,12 +11,14 @@
   padding-top: 25px;
   padding-bottom: 24px;
 }
-.logo__part {
+.logo__part,
+.logo-footer__part {
   color: var(--second-color);
 }
 .logo,
 .logo__part,
-.logo-footer__item {
+.logo-footer,
+.footer__box {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.192;
@@ -23,18 +26,17 @@
   font-family: $font-family-1st;
   text-decoration: none;
 }
-.logo-footer__item {
+.logo-footer {
   margin-bottom: 20px;
 }
-
-.menu {
+.site-nav__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-  &.current {
+  &.site-nav__link--current {
     color: var(--second-color);
   }
-  &.current::after {
+  &.site-nav__link--current::after {
     display: inline-block;
     content: "";
     position: absolute;
@@ -46,27 +48,28 @@
     background-color: var(--second-color);
   }
 }
-.contacts {
+.contacts__link {
   color: var(--text-color);
   display: inline-flex;
   align-items: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &__icon {
-    display: inline-flex;
-    margin-right: 10px;
-    cursor: pointer;
-    fill: var(--text-color);
-    align-items: center;
-    color: currentColor;
-  }
+
   &:hover,
   &:focus {
     color: var(--second-color);
     --text-color: var(--second-color);
   }
 }
-.menu,
-.contacts {
+.contacts__icon {
+  display: inline-flex;
+  margin-right: 10px;
+  cursor: pointer;
+  fill: var(--text-color);
+  align-items: center;
+  color: currentColor;
+}
+.site-nav__link,
+.contacts__link {
   display: flex;
   align-items: center;
   font-weight: 500;
@@ -82,21 +85,22 @@
     display: flex;
     align-items: center;
   }
-  &__list {
+}
+.contacts {
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+}
+.site-nav {
+  display: flex;
+  &__item {
     position: relative;
     &:not(:last-child) {
       margin-right: 50px;
     }
   }
-  &__menu {
-    display: flex;
-  }
-  &__contacts {
-    align-items: center;
-    display: flex;
-    margin-left: auto;
-  }
 }
+
 .nav {
   display: flex;
   align-items: center;
@@ -111,13 +115,13 @@
   height: 12px;
 }
 
-.menu {
+.site-nav__link {
   color: var(--brand-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus,
-  .contacts:hover,
-  .contacts:focus {
+  .contacts__link:hover,
+  .contacts__link:focus {
     color: var(--second-color);
   }
 }
